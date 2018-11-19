@@ -1,3 +1,27 @@
+/**
+Problem description : 
+  given a tree with numbers written on nodes choose exactly m nodes 
+  such that no two chosen nodes(u ,v) and u is ancestor of v. 
+  maximize sum of values of chosen nodes.
+
+we can represent answer of a subtree as vector where element at index i[0,M] represent the
+maximum answer of choosing exactly i nodes.
+ex : answer[1] = maximum node in the subtree
+
+we can see that the answer for any node depends on the answers of its children subtrees
+so we want to merge the answers of children to get the best answer for the current subtree.
+
+now it's a knapsack problem we have some items with weights(represented by index) and values(elements)
+and we want to maximize the vaues at each index of the new answer vector.
+
+implemetation details : 
+  in function knap we merge two vectors into new vector where the value of k-th item is max of all i,j
+  where i+j = k and a[i]+b[j] is max
+  In worst case this function works in O(M^2) which can only happen at most N/M = (N/M)*M^2 = NM
+  on average it works in O(M) which gives us complexity N*M
+
+time complexity : O(NM)
+*/
 #include <bits/stdc++.h>
 using namespace std;
 
