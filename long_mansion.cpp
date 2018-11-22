@@ -1,5 +1,5 @@
 /**
-same sol idea
+same sol idea : https://github.com/nikolapesic2802/Programming-Practice/blob/master/Long%20Mansion/main.cpp
 */
 
 #include <bits/stdc++.h>
