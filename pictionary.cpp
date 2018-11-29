@@ -1,4 +1,17 @@
 /**
+we can iterate over days starting from day 1 and on i-th day 
+we add edge between node (m-i+1) and its multiples 2*(m-i+1) ,3*(m-i+1) and so on.
+like in kruskal's mst algorithm we add edge between nodes iff the two nodes weren't 
+already connected.
+
+now we have a mst of cities and the answer for the query is the max edge between the
+given two cities.
+it's easy to solve query using binary lifting to get the max edge between given node
+and it's lca.
+
+time complexity : O(N*log(M) + Q*log(log(N)))
+
+simpler solution : https://github.com/zoooma13/Competitive-Programming/blob/master/pictionary_simple.cpp
 */
 
 #include <bits/stdc++.h>
