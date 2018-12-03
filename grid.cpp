@@ -1,5 +1,6 @@
 /**
 First solution in editorial : https://github.com/mostafa-saad/MyCompetitiveProgramming/blob/master/Olympiad/Baltic/official/boi2008_solutions/grid-sol-en.pdf
+time complexity : O(mCs * n*s * log(4*10^8))
 */
 
 #include <bits/stdc++.h>
