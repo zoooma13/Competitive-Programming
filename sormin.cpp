@@ -6,7 +6,7 @@ the answer is the bitwise inverse of b
 we can check if a solution without b exists by applying knapsack
 because of strict TL we have to optimize the knapsack by :
  -using bitset
- -replacing repeated number a by 1*a ,2*a ,3*a ,4*a ...
+ -replacing repeated number a by 1*a ,2*a ,4*a ,8*a ...
   so we can get all its possible sums in knapsack
 */
 
