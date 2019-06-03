@@ -1,11 +1,18 @@
 /**
+problem description : 
+ given an array A of N integers. Find how many pairs of indices (i ,j) such that i <= j and the number 
+ of different bits in A[i] and A[j] binary representations is exactly equal to 4. (1 <= N <= 10^5 ,0 <= A[i] < 2^20)
+sample case :
+ N = 4 ,A = {15 ,0 ,10 ,5}
+ pairs that differ by exactly 4 bits are (1 ,2) and (3 ,4) ,so answer = 2.
+
 a naive solution would be for each element flip every possible 4 bits and check if there exists an element
 with that value this solution works in N*(20C4) which is not fast enough to pass.
 
 lets create a dp[d][m] that stores the number of elements from the array that we can modify their value by flipping exactly d bits to be equal to m.
 instead of flipping 4 bits for each element we can divide a number c into 2 halves a = (n>>10) and b = n&((1<<10)-1) so that c = (a*2^10)+b 
 now flip at most 4 bits in a and increase dp[d][m_a*2^10+b] by 1 where m_a is the modified a and d is # of diff bits between a and m_a
-then for the second half flip at most 4 bits and add dp[4-d][a*2^10+m_b] where m_b is modified b and d is # of diff bits between b and m_b
+then for the second half flip at most 4 bits and add to the answer dp[4-d][a*2^10+m_b] where m_b is modified b and d is # of diff bits between b and m_b
 this will be equivalent to flipping all 4 bits for each element.
 
 time complexity : O(N*2^10)
