@@ -111,7 +111,7 @@ int main()
             cntb = ub(all(occ[b]) ,r2)-lb(all(occ[b]) ,l2);
             ans = 1LL*ans*fact[cntb]%mod;
         }
-
+ 
         ans = 1LL*ans*qry(root[r2+1] ,l2)%mod;
         last_ans = 1LL*fact[r2-l2+1]*modinv(ans)%mod;
         printf("%d\n",last_ans);
