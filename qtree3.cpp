@@ -1,5 +1,5 @@
 /**
-tags : HLD
+tags : tree ,HLD
 time complexity : O(q*log^2(n))
 */
 
