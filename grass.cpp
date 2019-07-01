@@ -1,3 +1,7 @@
+/**
+http://usaco.org/current/data/sol_grass_gold.html
+*/
+
 #include <bits/stdc++.h>
 using namespace std;
 
